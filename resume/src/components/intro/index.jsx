@@ -1,10 +1,8 @@
 import Box from '@material-ui/core/Box'
-import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles'
 
 import hello from '../../assets/images/hello.svg'
 import SocialLinks from './SocialLinks'
-import { AiOutlineArrowRight } from 'react-icons/ai'
 
 const useStyles = makeStyles(theme => ({
   background: {
@@ -46,17 +44,6 @@ const Intro = () => {
           Frontend Developer
         </Box>
         <SocialLinks />
-        <Box>
-          <Button
-            className={classes.button}
-            size='medium'
-            variant='contained'
-            color='primary'
-            endIcon={<AiOutlineArrowRight />}
-          >
-            <Box fontWeight='fontWeightBold'> Get in Touch</Box>
-          </Button>
-        </Box>
       </Box>
     </Box>
   )
