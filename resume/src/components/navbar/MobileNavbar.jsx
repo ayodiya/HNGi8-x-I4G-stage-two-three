@@ -35,6 +35,9 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     width: '100%',
     color: '#212529'
+  },
+  anchor: {
+    textDecoration: 'none'
   }
 }))
 
@@ -51,11 +54,13 @@ const MobileNavbar = ({ navLinks }) => {
   const NavLinks = () => (
     <Box className={classes.list} onClick={closeSideNavbar}>
       <List>
-        {navLinks.map(({ text }) => (
+        {navLinks.map(({ url, text }) => (
           <ListItem button key={text}>
-            <ListItemText
-              primary={<Typography align='center'>{text}</Typography>}
-            />
+            <a key={url} href={url} className={classes.anchor}>
+              <ListItemText
+                primary={<Typography align='center'>{text}</Typography>}
+              />
+            </a>
           </ListItem>
         ))}
       </List>
