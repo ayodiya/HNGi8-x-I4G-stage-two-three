@@ -1,11 +1,13 @@
 import Box from '@material-ui/core/Box'
+import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
   background: {
-    paddingTop: '40px',
-    paddingBottom: '100px'
+    [theme.breakpoints.up('md')]: {
+      padding: '40px 100px 100px 100px'
+    }
   },
   heading: {
     display: 'flex',
@@ -16,19 +18,25 @@ const useStyles = makeStyles(theme => ({
   heading2: {
     fontSize: '20px',
     fontWeight: 'bold',
+    backgroundColor: 'white',
+    padding: '10px  20px  10px 20px',
     [theme.breakpoints.up('md')]: {
       fontSize: '30px'
     }
   },
   paper: {
     width: '80%',
-    padding: '30px',
-    borderRadius: '5px',
+    borderRadius: '10px',
+    height: '200px',
+    backgroundColor: '#f4f6f8',
     [theme.breakpoints.up('md')]: {
-      width: '40%'
+      width: '100%',
+      height: '250px'
     }
   },
   workspace: {
+    fontSize: '20x',
+    padding: '25px',
     [theme.breakpoints.up('md')]: {
       fontSize: '25px'
     }
@@ -42,15 +50,15 @@ const useStyles = makeStyles(theme => ({
 
 const education = [
   {
-    school: 'FREE CODE CAMP, USA',
+    school: 'Free Code Camp, USA',
     degree: 'Fullstack Certificate in Web Development - April, 2020'
   },
   {
-    school: 'INSTITUTE FOR CUSTOMER RELATIONSHIP MANAGEMENT,NIGERIA',
+    school: 'Institute For Customer Relationship Management, Nigeria',
     degree: 'PGD in Customer Relationship Management - 2017'
   },
   {
-    school: 'OBAFEMI AWOLOWO UNIVERSITY, NIGERIA',
+    school: 'Obafemi Awolowo University, Nigeria',
     degree: 'Bachelor of Arts in English Language - 2014'
   }
 ]
@@ -61,16 +69,31 @@ const Education = () => {
   return (
     <Box id='education' className={classes.background}>
       <Box className={classes.heading}>Education</Box>
-      {education.map(({ school, degree }) => (
-        <Box key={school} display='flex' justifyContent='center' pt={8}>
-          <Paper className={classes.paper} key={degree}>
-            <Box className={classes.heading2}>{school}</Box>
-            <Box pt={1} className={classes.workspace}>
-              {degree}
+      <Grid container justifyContent='center' alignItems='center' spacing={2}>
+        {education.map(({ school, degree }) => (
+          <Grid key={school} item xs={12} lg={6}>
+            <Box
+              display='flex'
+              justifyContent='center'
+              pt={8}
+              // data-aos='zoom-in-up'
+              // data-aos-delay='100'
+              data-aos='flip-left'
+              data-aos-easing='ease-out-cubic'
+              data-aos-duration='2000'
+            >
+              <Paper className={classes.paper} key={degree}>
+                <Box className={classes.heading2}>
+                  <Box>{school}</Box>
+                </Box>
+                <Box pt={1} className={classes.workspace}>
+                  {degree}
+                </Box>
+              </Paper>
             </Box>
-          </Paper>
-        </Box>
-      ))}
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   )
 }
