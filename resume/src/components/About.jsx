@@ -15,23 +15,38 @@ const useStyles = makeStyles(theme => ({
     fontSize: '15px',
     textAlign: 'justify',
     paddingTop: '10px',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.only('md')]: {
       flexDirection: 'row',
       paddingRight: '70px',
-      fontSize: '20px'
+      fontSize: '20px',
+      width: '100%'
+    },
+    [theme.breakpoints.up('lg')]: {
+      flexDirection: 'row',
+      paddingRight: '70px',
+      fontSize: '20px',
+      width: '70%'
     }
   },
   pageBox: {
     padding: '30px 50px 50px 50px',
     display: 'flex',
     flexDirection: 'column',
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.only('md')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      padding: '30px 150px 50px 150px'
+    },
+    [theme.breakpoints.up('lg')]: {
+      display: 'flex',
       flexDirection: 'row',
-      padding: '30px 100px 50px 100px'
+      padding: '30px 250px 50px 250px'
     }
   },
   image: {
-    borderRadius: '20px'
+    borderRadius: '20px',
+    width: '100%',
+    height: '100%'
   }
 }))
 
@@ -65,14 +80,8 @@ const About = () => {
           </Box>
         </Box>
       </Box>
-      <Box pt={5}>
-        <img
-          className={classes.image}
-          src={myPic}
-          alt='profile pic'
-          width='100%'
-          height='100%'
-        />
+      <Box pt={5} width='100%' data-aos='fade-left' data-aos-delay='100'>
+        <img className={classes.image} src={myPic} alt='profile pic' />
       </Box>
     </Box>
   )
