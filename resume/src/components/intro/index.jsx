@@ -39,8 +39,19 @@ const Intro = () => {
       </Box>
       <Box className={classes.textBox}>
         <Box>Hello!</Box>
-        <Box fontWeight='fontWeightBold'>I’m Ayodeji Oludiya</Box>
-        <Box display='flex' fontSize={20}>
+        <Box
+          fontWeight='fontWeightBold'
+          data-aos='fade-left'
+          data-aos-delay='50'
+        >
+          I’m Ayodeji Oludiya
+        </Box>
+        <Box
+          display='flex'
+          fontSize={20}
+          data-aos='fade-up'
+          data-aos-delay='100'
+        >
           Frontend Developer
         </Box>
         <SocialLinks />
