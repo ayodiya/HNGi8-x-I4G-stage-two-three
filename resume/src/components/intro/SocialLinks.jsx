@@ -13,7 +13,7 @@ const SocialLinks = () => {
   const classes = useStyles()
 
   return (
-    <Box pt={2} pb={2}>
+    <Box pt={2} pb={2} data-aos='fade-up' data-aos-delay='200'>
       <a
         className={classes.link}
         href='https://www.linkedin.com/in/ayodiyah'
