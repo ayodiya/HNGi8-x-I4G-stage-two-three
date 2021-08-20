@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: '30px',
     fontWeight: 'bold',
     color: '#212529',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       display: 'none'
     }
   },

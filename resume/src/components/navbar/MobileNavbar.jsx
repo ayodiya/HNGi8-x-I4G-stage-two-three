@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'flex-end',
     alignItems: 'center',
     flexGrow: 1,
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('lg')]: {
       display: 'none'
     }
   },
