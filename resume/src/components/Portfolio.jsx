@@ -56,11 +56,19 @@ const Portfolio = () => {
 
   return (
     <>
-      <Box id='portfolio' className={classes.pageBox} pl={20} pr={20} pb={10}>
+      <Box
+        id='portfolio'
+        className={classes.pageBox}
+        pl={20}
+        pr={20}
+        pb={10}
+        data-aos='zoom-in-up'
+        data-aos-duration='2000'
+      >
         <Box className={classes.heading}>Portfolio</Box>
         <Grid container justifyContent='center' alignItems='center' spacing={2}>
           {portItems.map(({ image, url }) => (
-            <Grid key={url} item xs={12} md={4}>
+            <Grid key={url} item xs={12} md={6}>
               <Card className={classes.root}>
                 <CardActionArea>
                   <CardMedia
