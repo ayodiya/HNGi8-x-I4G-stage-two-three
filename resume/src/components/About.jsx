@@ -32,6 +32,7 @@ const useStyles = makeStyles(theme => ({
     padding: '30px 50px 50px 50px',
     display: 'flex',
     flexDirection: 'column',
+    backgroundColor: 'white',
     [theme.breakpoints.only('md')]: {
       display: 'flex',
       flexDirection: 'column',
@@ -80,7 +81,13 @@ const About = () => {
           </Box>
         </Box>
       </Box>
-      <Box pt={5} width='100%' data-aos='fade-left' data-aos-delay='100'>
+      <Box
+        pt={5}
+        width='100%'
+        height='100%'
+        data-aos='fade-left'
+        data-aos-delay='100'
+      >
         <img className={classes.image} src={myPic} alt='profile pic' />
       </Box>
     </Box>
