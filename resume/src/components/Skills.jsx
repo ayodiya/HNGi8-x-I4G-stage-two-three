@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       flexDirection: 'row'
     }
+  },
+  page: {
+    backgroundColor: 'white'
   }
 }))
 
@@ -27,34 +30,60 @@ const Skills = () => {
 
   return (
     <>
-      <Box
-        id='skills'
-        display='flex'
-        fontWeight='fontWeightBold'
-        justifyContent='center'
-        fontSize={50}
-      >
-        My Skills
-      </Box>
-      <Box pt={5} pb={5} display='flex' justifyContent='center'>
-        <Box className={classes.iconBox}>
-          <Box className={classes.icon} data-aos='fade-up' data-aos-delay='100'>
-            <DiJavascript1 />
-          </Box>
-          <Box className={classes.icon} data-aos='fade-up' data-aos-delay='200'>
-            <DiReact />
-          </Box>
-          <Box className={classes.icon} data-aos='fade-up' data-aos-delay='300'>
-            <SiRedux />
-          </Box>
-          <Box className={classes.icon} data-aos='fade-up' data-aos-delay='400'>
-            <SiMongodb />
-          </Box>
-          <Box className={classes.icon} data-aos='fade-up' data-aos-delay='500'>
-            <img src={expressjs} alt='' width='90%' height='100%' />
-          </Box>
-          <Box className={classes.icon} data-aos='fade-up' data-aos-delay='600'>
-            <SiNextDotJs />
+      <Box className={classes.page}>
+        <Box
+          id='skills'
+          display='flex'
+          fontWeight='fontWeightBold'
+          justifyContent='center'
+          fontSize={50}
+        >
+          My Skills
+        </Box>
+        <Box pt={5} pb={5} display='flex' justifyContent='center'>
+          <Box className={classes.iconBox}>
+            <Box
+              className={classes.icon}
+              data-aos='fade-up'
+              data-aos-delay='100'
+            >
+              <DiJavascript1 />
+            </Box>
+            <Box
+              className={classes.icon}
+              data-aos='fade-up'
+              data-aos-delay='200'
+            >
+              <DiReact />
+            </Box>
+            <Box
+              className={classes.icon}
+              data-aos='fade-up'
+              data-aos-delay='300'
+            >
+              <SiRedux />
+            </Box>
+            <Box
+              className={classes.icon}
+              data-aos='fade-up'
+              data-aos-delay='400'
+            >
+              <SiMongodb />
+            </Box>
+            <Box
+              className={classes.icon}
+              data-aos='fade-up'
+              data-aos-delay='500'
+            >
+              <img src={expressjs} alt='' width='90%' height='100%' />
+            </Box>
+            <Box
+              className={classes.icon}
+              data-aos='fade-up'
+              data-aos-delay='600'
+            >
+              <SiNextDotJs />
+            </Box>
           </Box>
         </Box>
       </Box>
