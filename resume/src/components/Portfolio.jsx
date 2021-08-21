@@ -25,7 +25,8 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     fontSize: '40px',
     fontWeight: 'bold',
-    paddingBottom: '40px'
+    paddingBottom: '40px',
+    paddingTop: '40px'
   },
   image: {
     objectFit: 'cover',
@@ -48,7 +49,7 @@ const portItems = [
   { image: skicon, url: 'https://www.skiconnect.herokuapp.com' },
   { image: grantmaster, url: 'https://www.grantmaster.xyz' },
   { image: socialSugar, url: 'https://www.socialsugar.agency' },
-  { image: photoperfects, url: 'https://www.photoperfects.com/register' }
+  { image: photoperfects, url: 'https://www.photoperfects.com' }
 ]
 
 const Portfolio = () => {
