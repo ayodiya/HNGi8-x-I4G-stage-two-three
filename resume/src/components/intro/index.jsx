@@ -33,7 +33,7 @@ const Intro = () => {
   const classes = useStyles()
 
   return (
-    <Box className={classes.background}>
+    <Box className={classes.background} id='top'>
       <Box className={classes.imagePadding}>
         <img src={hello} alt='hello' width='100%' height='100%' />
       </Box>
