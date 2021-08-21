@@ -20,11 +20,11 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const navLinks = [
-  { url: '#about', text: 'About' },
-  { url: '#skills', text: 'Skills' },
-  { url: '#portfolio', text: 'Portfolio' },
-  { url: '#experience', text: 'Experience' },
-  { url: '#education', text: 'Education' }
+  { url: 'about', text: 'About' },
+  { url: 'skills', text: 'Skills' },
+  { url: 'portfolio', text: 'Portfolio' },
+  { url: 'experience', text: 'Experience' },
+  { url: 'education', text: 'Education' }
 ]
 
 const Navbar = () => {
