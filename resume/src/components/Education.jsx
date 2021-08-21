@@ -5,6 +5,8 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
   background: {
+    backgroundColor: '#f4f6f8',
+    paddingBottom: '50px',
     [theme.breakpoints.up('md')]: {
       padding: '40px 100px 100px 100px'
     }
@@ -13,12 +15,13 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     fontSize: '40px',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    paddingTop: '40px'
   },
   heading2: {
     fontSize: '20px',
     fontWeight: 'bold',
-    backgroundColor: 'white',
+    backgroundColor: '#f4f6f8',
     padding: '10px  20px  10px 20px',
     [theme.breakpoints.up('md')]: {
       fontSize: '30px'
@@ -28,9 +31,9 @@ const useStyles = makeStyles(theme => ({
     width: '80%',
     borderRadius: '10px',
     height: '200px',
-    backgroundColor: '#f4f6f8',
+    backgroundColor: 'white',
     [theme.breakpoints.up('md')]: {
-      width: '100%',
+      width: '65%',
       height: '250px'
     }
   },
@@ -76,8 +79,6 @@ const Education = () => {
               display='flex'
               justifyContent='center'
               pt={8}
-              // data-aos='zoom-in-up'
-              // data-aos-delay='100'
               data-aos='flip-left'
               data-aos-easing='ease-out-cubic'
               data-aos-duration='2000'
