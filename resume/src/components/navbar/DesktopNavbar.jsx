@@ -1,5 +1,6 @@
 import Box from '@material-ui/core/Box'
 import { makeStyles } from '@material-ui/core/styles'
+import { Link } from 'react-scroll'
 
 const useStyles = makeStyles(theme => ({
   nav: {
@@ -16,7 +17,8 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 'bold'
   },
   anchor: {
-    textDecoration: 'none'
+    textDecoration: 'none',
+    cursor: 'pointer'
   }
 }))
 
@@ -26,14 +28,22 @@ const DesktopNavbar = ({ navLinks }) => {
   return (
     <>
       <Box display='flex' className={classes.nav} width='100%'>
-        Ayodeji Oludiya
+        <Link to='top' smooth={true} duration={500} className={classes.anchor}>
+          Ayodeji Oludiya
+        </Link>
       </Box>
       {navLinks.map(({ url, text }) => (
-        <a key={url} href={url} className={classes.anchor}>
+        <Link
+          key={url}
+          to={url}
+          smooth={true}
+          duration={500}
+          className={classes.anchor}
+        >
           <Box key={text} className={`${classes.links}  ${classes.nav}`}>
             {text}
           </Box>
-        </a>
+        </Link>
       ))}
     </>
   )
