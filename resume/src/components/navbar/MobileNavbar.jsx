@@ -7,6 +7,7 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import { makeStyles } from '@material-ui/core/styles'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { Link } from 'react-scroll'
 import { useState } from 'react'
 
 const useStyles = makeStyles(theme => ({
@@ -56,11 +57,18 @@ const MobileNavbar = ({ navLinks }) => {
       <List>
         {navLinks.map(({ url, text }) => (
           <ListItem button key={text}>
-            <a key={url} href={url} className={classes.anchor}>
+            <Link
+              key={url}
+              to={url}
+              smooth={true}
+              duration={500}
+              className={classes.anchor}
+              onClick={closeSideNavbar}
+            >
               <ListItemText
                 primary={<Typography align='center'>{text}</Typography>}
               />
-            </a>
+            </Link>
           </ListItem>
         ))}
       </List>
