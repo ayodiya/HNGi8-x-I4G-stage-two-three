@@ -5,7 +5,8 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles(theme => ({
   background: {
     paddingTop: '40px',
-    paddingBottom: '100px'
+    paddingBottom: '100px',
+    backgroundColor: 'white'
   },
   heading: {
     display: 'flex',
@@ -27,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     width: '80%',
     borderRadius: '10px',
     [theme.breakpoints.up('md')]: {
-      width: '40%'
+      width: '30%'
     }
   },
   bullet: {
